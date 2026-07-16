@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Student Hub Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>Student Hub Portal</h1>
+
+    <p>Your Gateway to Student Life</p>
+
+</header>
+
+<main>
+
+
+<section class="register-box">
+
+
+<h2>Student Registration</h2>
+
+
+
+<form>
+
+
+
+<div class="form-group">
+
+    <label>Name</label>
+
+    <input 
+        type="text"
+        placeholder="Enter your name"
+        required
+    >
+
+</div>
+
+
+
+
+<div class="form-group">
+
+    <label>Email</label>
+
+    <input 
+        type="email"
+        placeholder="Enter your email"
+        required
+    >
+
+</div>
+
+
+
+
+<div class="form-group">
+
+    <label>Password</label>
+
+    <input 
+        type="password"
+        placeholder="Create password"
+        required
+    >
+
+</div>
+
+
+
+
+<div class="form-group">
+
+    <label>Course</label>
+
+    <select required>
+
+        <option>B.Tech CSE</option>
+
+        <option>B.Tech IT</option>
+
+        <option>B.Tech CE</option>
+
+        <option>B.Tech ME</option>
+
+    </select>
+
+</div>
+
+
+
+
+<div class="form-group">
+
+    <label>Gender</label>
+
+
+    <input 
+        type="radio" 
+        name="gender"
+        required
+    >
+
+    Male
+    <input 
+        type="radio" 
+        name="gender"
+    >
+
+    Female
+
+
+</div>
+
+
+
+
+<button type="button" onclick="registerUser()">
+
+    Register
+
+</button>
+
+
+
+</form>
+
+
+
+
+<p>
+
+    Already have an account?
+
+    <a href="login.html">
+        Login Here
+    </a>
+
+</p>
+
+
+
+</section>
+
+
+</main>
+
+
+
+
+<footer>
+
+    <p>
+        © 2026 Student Hub Portal. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+
+<script>
+
+function registerUser(){
+
+    window.location.href = "dashboard.html";
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
