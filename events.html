@@ -4,17 +4,25 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Events | Student Hub Portal</title>
 
+    <!-- Original Events page styling -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Practical 4 interactive feature styling -->
+    <link rel="stylesheet" href="style4.css">
+
+    <!-- Practical 6 styling -->
+    <link rel="stylesheet" href="practical6.css">
 
 </head>
 
-
 <body>
 
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
 
 <header>
 
@@ -24,9 +32,7 @@
 
 </header>
 
-
-
-<nav>
+<nav aria-label="Main Navigation">
 
     <a href="index.html">Home</a>
 
@@ -34,124 +40,243 @@
 
     <a href="events.html">Events</a>
 
+    <a href="helpdesk.html">Helpdesk</a>
+
+    <a href="login.html">Login</a>
+
+    <a href="register.html">Register</a>
+
 </nav>
 
-
-
-<main>
-
+<main id="main-content">
 
 <section class="hero">
 
     <h2>Upcoming Events</h2>
 
+    <p>
+        Explore upcoming college events, workshops, competitions,
+        and cultural activities.
+    </p>
+
 </section>
 
+
+<!-- ==========================
+     PRACTICAL 6
+     DYNAMIC EVENT DATA
+========================== -->
+
+<section>
+
+    <h2>Event Schedule</h2>
+
+    <div class="event-controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search events..."
+            aria-label="Search events"
+        >
+
+        <select id="categoryFilter" aria-label="Filter events by category">
+
+            <option value="all">All Categories</option>
+
+            <option value="Technical">Technical</option>
+
+            <option value="Workshop">Workshop</option>
+
+            <option value="Cultural">Cultural</option>
+
+            <option value="Seminar">Seminar</option>
+
+            <option value="Sports">Sports</option>
+
+        </select>
+
+        <select id="sortSelect" aria-label="Sort events">
+
+            <option value="default">Sort By</option>
+
+            <option value="nameAsc">Name A-Z</option>
+
+            <option value="nameDesc">Name Z-A</option>
+
+            <option value="dateAsc">Date Oldest-Newest</option>
+
+            <option value="dateDesc">Date Newest-Oldest</option>
+
+        </select>
+
+    </div>
+
+
+    <p id="loading">Loading events...</p>
+
+    <p id="error"></p>
+
+
+    <div class="event-table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Event Name</th>
+
+                    <th>Category</th>
+
+                    <th>Date</th>
+
+                    <th>Venue</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="eventTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div class="pagination">
+
+        <button id="prevBtn">Previous</button>
+
+        <span id="pageNumber">Page 1</span>
+
+        <button id="nextBtn">Next</button>
+
+    </div>
+
+</section>
 
 
 <section>
 
+    <h2>Featured Events</h2>
 
-<table>
+    <div class="grid-3">
 
+        <div class="card">
 
-<tr>
+            <h3>Hackathon</h3>
 
-    <th>Event Name</th>
+            <p>
+                Participate in coding challenges and compete with fellow students.
+            </p>
 
-    <th>Date</th>
+        </div>
 
-    <th>Venue</th>
+        <div class="card">
 
-    <th>Status</th>
+            <h3>Workshop</h3>
 
-</tr>
+            <p>
+                Enhance your web development skills through hands-on sessions.
+            </p>
 
+        </div>
 
+        <div class="card">
 
-<tr>
+            <h3>Cultural Fest</h3>
 
-    <td>Hackathon</td>
+            <p>
+                Enjoy music, dance, drama, and other cultural performances.
+            </p>
 
-    <td>20 July 2026</td>
+        </div>
 
-    <td>Seminar Hall</td>
+    </div>
 
-    <td>Registration Open</td>
+    <br>
 
-</tr>
-
-
-
-<tr>
-
-    <td>Web Development Workshop</td>
-
-    <td>25 July 2026</td>
-
-    <td>Computer Lab</td>
-
-    <td>Registration Open</td>
-
-</tr>
-
-
-
-<tr>
-
-    <td>Sports Day</td>
-
-    <td>5 August 2026</td>
-
-    <td>College Ground</td>
-
-    <td>Upcoming</td>
-
-</tr>
-
-
-
-<tr>
-
-    <td>Cultural Fest</td>
-
-    <td>15 August 2026</td>
-
-    <td>College Auditorium</td>
-
-    <td>Upcoming</td>
-
-</tr>
-
-
-</table>
-
+    <button id="openModal">View Event Information</button>
 
 </section>
 
+
 <section>
 
+    <h2>Event Gallery</h2>
 
-<h2>Event Gallery</h2>
+    <div class="gallery">
+
+        <img
+            src="images/hack.jpeg"
+            alt="Students participating in Hackathon"
+        >
+
+        <img
+            src="images/wdw.jpeg"
+            alt="Students attending Web Development Workshop"
+        >
+
+        <img
+            src="images/sport.jpeg"
+            alt="Students participating in Sports Day"
+        >
+
+    </div>
+
+</section>
 
 
-<div class="gallery">
+<aside>
+
+    <h3>Event Guidelines</h3>
+
+    <ul>
+
+        <li>Register before the deadline.</li>
+
+        <li>Carry your student ID card.</li>
+
+        <li>Arrive 30 minutes before the event.</li>
+
+        <li>Follow college rules and regulations.</li>
+
+    </ul>
+
+</aside>
 
 
-<img src="images/hack.jpeg" alt="Hackathon Event">
+<!-- ==========================
+     MODAL POPUP
+========================== -->
 
+<div class="modal" id="modal">
 
-<img src="images/wdw.jpeg" alt="Web Development Workshop">
+    <div class="modal-content">
 
+        <span class="close">&times;</span>
 
-<img src="images/sport.jpeg" alt="Sports Day Event">
+        <h2>Event Registration Information</h2>
 
+        <p>
+            Students can register for upcoming events through the
+            Student Hub Portal. Please check the event date, venue,
+            and registration deadline before registering.
+        </p>
+
+        <button id="closeModal">Close</button>
+
+    </div>
 
 </div>
 
 
-</section>
 </main>
+
 
 <footer>
 
@@ -162,6 +287,11 @@
 </footer>
 
 
+<!-- Practical 4 Modal JavaScript -->
+<script src="modal.js"></script>
+
+<!-- Practical 6 JavaScript -->
+<script src="practical6.js"></script>
 
 </body>
 

@@ -4,16 +4,114 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Register | Student Hub Portal</title>
 
     <link rel="stylesheet" href="style.css">
 
+    <style>
+
+        .error {
+            color: red;
+            font-size: 14px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .valid {
+            color: green;
+            font-size: 14px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .password-strength {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           GENDER SECTION
+           ========================= */
+
+        .gender-group {
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 0 20px 0 !important;
+            width: 100%;
+            display: block;
+        }
+
+        .gender-group legend {
+            font-weight: bold;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+
+        .gender-options {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .gender-option {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 7px;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .gender-option:first-child {
+            justify-content: flex-start !important;
+        }
+
+        .gender-option:last-child {
+            justify-content: flex-end !important;
+        }
+
+        .gender-option input[type="radio"] {
+            display: inline-block !important;
+            width: 16px !important;
+            height: 16px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            flex: 0 0 auto !important;
+        }
+
+        .gender-option label {
+            display: inline-block !important;
+            width: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            cursor: pointer;
+        }
+
+        .gender-group .error {
+            display: block !important;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+    </style>
+
 </head>
 
 
 <body>
+
+
+<a href="#main-content" class="skip-link">
+    Skip to Main Content
+</a>
 
 
 <header>
@@ -24,142 +122,407 @@
 
 </header>
 
-<main>
+
+<nav aria-label="Main Navigation">
+
+    <a href="index.html">Home</a>
+
+    <a href="aboutus.html">About Us</a>
+
+    <a href="events.html">Events</a>
+
+    <a href="helpdesk.html">Helpdesk</a>
+
+    <a href="login.html">Login</a>
+
+    <a href="register.html">Register</a>
+
+</nav>
+
+
+<main id="main-content">
 
 
 <section class="register-box">
 
+    <h2>Student Registration</h2>
 
-<h2>Student Registration</h2>
+    <p>
+        Register to access courses, events and student services.
+    </p>
 
 
+    <form id="registrationForm" novalidate>
 
-<form>
 
+        <!-- FULL NAME -->
 
+        <div class="form-group">
 
-<div class="form-group">
+            <label for="name">
+                Full Name
+            </label>
 
-    <label>Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+                minlength="2"
+                maxlength="50"
+                aria-describedby="nameError"
+            >
 
-    <input 
-        type="text"
-        placeholder="Enter your name"
-        required
-    >
+            <span
+                id="nameError"
+                class="error"
+                aria-live="polite">
+            </span>
 
-</div>
+        </div>
 
 
+        <!-- EMAIL -->
 
+        <div class="form-group">
 
-<div class="form-group">
+            <label for="email">
+                Email Address
+            </label>
 
-    <label>Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@gmail.com"
+                required
+                aria-describedby="emailError"
+            >
 
-    <input 
-        type="email"
-        placeholder="Enter your email"
-        required
-    >
+            <span
+                id="emailError"
+                class="error"
+                aria-live="polite">
+            </span>
 
-</div>
+        </div>
 
 
+        <!-- MOBILE -->
 
+        <div class="form-group">
 
-<div class="form-group">
+            <label for="phone">
+                Mobile Number
+            </label>
 
-    <label>Password</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter 10-digit mobile number"
+                required
+                maxlength="10"
+                aria-describedby="phoneError"
+            >
 
-    <input 
-        type="password"
-        placeholder="Create password"
-        required
-    >
+            <span
+                id="phoneError"
+                class="error"
+                aria-live="polite">
+            </span>
 
-</div>
+        </div>
 
 
+        <!-- PASSWORD -->
 
+        <div class="form-group">
 
-<div class="form-group">
+            <label for="password">
+                Password
+            </label>
 
-    <label>Course</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create password"
+                required
+                minlength="8"
+                maxlength="20"
+                aria-describedby="passwordError passwordStrength"
+            >
 
-    <select required>
+            <span
+                id="passwordError"
+                class="error"
+                aria-live="polite">
+            </span>
 
-        <option>B.Tech CSE</option>
+            <div
+                id="passwordStrength"
+                class="password-strength"
+                aria-live="polite">
+            </div>
 
-        <option>B.Tech IT</option>
+        </div>
 
-        <option>B.Tech CE</option>
 
-        <option>B.Tech ME</option>
+        <!-- CONFIRM PASSWORD -->
 
-    </select>
+        <div class="form-group">
 
-</div>
+            <label for="confirmPassword">
+                Confirm Password
+            </label>
 
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Re-enter password"
+                required
+                aria-describedby="confirmPasswordError"
+            >
 
+            <span
+                id="confirmPasswordError"
+                class="error"
+                aria-live="polite">
+            </span>
 
+        </div>
 
-<div class="form-group">
 
-    <label>Gender</label>
+        <!-- COURSE -->
 
+        <div class="form-group">
 
-    <input 
-        type="radio" 
-        name="gender"
-        required
-    >
+            <label for="course">
+                Course
+            </label>
 
-    Male
-    <input 
-        type="radio" 
-        name="gender"
-    >
+            <select
+                id="course"
+                name="course"
+                required
+                aria-describedby="courseError"
+            >
 
-    Female
+                <option value="">
+                    Select Course
+                </option>
 
+                <option value="B.Tech CSE">
+                    B.Tech CSE
+                </option>
 
-</div>
+                <option value="B.Tech IT">
+                    B.Tech IT
+                </option>
 
+                <option value="B.Tech CE">
+                    B.Tech CE
+                </option>
 
+                <option value="B.Tech ME">
+                    B.Tech ME
+                </option>
 
+            </select>
 
-<button type="button" onclick="registerUser()">
+            <span
+                id="courseError"
+                class="error"
+                aria-live="polite">
+            </span>
 
-    Register
+        </div>
 
-</button>
 
+        <!-- YEAR -->
 
+        <div class="form-group">
 
-</form>
+            <label for="year">
+                Year
+            </label>
 
+            <select
+                id="year"
+                name="year"
+                required
+                aria-describedby="yearError"
+            >
 
+                <option value="">
+                    Select Year
+                </option>
 
+                <option value="1">
+                    First Year
+                </option>
 
-<p>
+                <option value="2">
+                    Second Year
+                </option>
 
-    Already have an account?
+                <option value="3">
+                    Third Year
+                </option>
 
-    <a href="login.html">
-        Login Here
-    </a>
+                <option value="4">
+                    Fourth Year
+                </option>
 
-</p>
+            </select>
 
+            <span
+                id="yearError"
+                class="error"
+                aria-live="polite">
+            </span>
+
+        </div>
+
+
+        <!-- GENDER -->
+
+        <fieldset class="gender-group">
+
+            <legend>
+                Gender
+            </legend>
+
+
+            <div class="gender-options">
+
+
+                <!-- LEFT -->
+
+                <div class="gender-option">
+
+                    <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="Male"
+                    >
+
+                    <label for="male">
+                        Male
+                    </label>
+
+                </div>
+
+
+                <!-- CENTER -->
+
+                <div class="gender-option">
+
+                    <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="Female"
+                    >
+
+                    <label for="female">
+                        Female
+                    </label>
+
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div class="gender-option">
+
+                    <input
+                        type="radio"
+                        id="other"
+                        name="gender"
+                        value="Other"
+                    >
+
+                    <label for="other">
+                        Other
+                    </label>
+
+                </div>
+
+
+            </div>
+
+
+            <span
+                id="genderError"
+                class="error"
+                aria-live="polite">
+            </span>
+
+        </fieldset>
+
+
+        <!-- TERMS -->
+
+        <div class="form-group">
+
+            <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                required
+                aria-describedby="termsError"
+            >
+
+            <label for="terms">
+                I agree to the Terms and Conditions
+            </label>
+
+            <span
+                id="termsError"
+                class="error"
+                aria-live="polite">
+            </span>
+
+        </div>
+
+
+        <!-- REGISTER BUTTON -->
+
+        <button type="submit">
+            Register
+        </button>
+
+
+        <div
+            id="successMessage"
+            class="valid"
+            aria-live="polite">
+        </div>
+
+
+    </form>
+
+
+    <p>
+
+        Already have an account?
+
+        <a href="login.html">
+            Login Here
+        </a>
+
+    </p>
 
 
 </section>
 
 
 </main>
-
-
 
 
 <footer>
@@ -172,17 +535,808 @@
 
 
 
-
 <script>
 
-function registerUser(){
 
-    window.location.href = "dashboard.html";
+/* =====================================
+   GET FORM ELEMENTS
+   ===================================== */
+
+const form =
+    document.getElementById("registrationForm");
+
+const nameInput =
+    document.getElementById("name");
+
+const emailInput =
+    document.getElementById("email");
+
+const phoneInput =
+    document.getElementById("phone");
+
+const passwordInput =
+    document.getElementById("password");
+
+const confirmPasswordInput =
+    document.getElementById("confirmPassword");
+
+const courseInput =
+    document.getElementById("course");
+
+const yearInput =
+    document.getElementById("year");
+
+const termsInput =
+    document.getElementById("terms");
+
+
+
+/* =====================================
+   REGULAR EXPRESSIONS
+   ===================================== */
+
+const nameRegex =
+    /^[A-Za-z ]+$/;
+
+const emailRegex =
+    /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+const phoneRegex =
+    /^[6-9][0-9]{9}$/;
+
+const uppercaseRegex =
+    /[A-Z]/;
+
+const lowercaseRegex =
+    /[a-z]/;
+
+const digitRegex =
+    /[0-9]/;
+
+const specialRegex =
+    /[@$!%*?&]/;
+
+
+
+/* =====================================
+   MESSAGE FUNCTIONS
+   ===================================== */
+
+function showError(id, message) {
+
+    const element =
+        document.getElementById(id);
+
+    element.textContent = message;
+
+    element.className = "error";
 
 }
 
-</script>
 
+function showSuccess(id, message) {
+
+    const element =
+        document.getElementById(id);
+
+    element.textContent = message;
+
+    element.className = "valid";
+
+}
+
+
+
+/* =====================================
+   NAME VALIDATION
+   ===================================== */
+
+function validateName() {
+
+    const name =
+        nameInput.value.trim();
+
+
+    if (name === "") {
+
+        showError(
+            "nameError",
+            "Name is required."
+        );
+
+        return false;
+
+    }
+
+
+    if (name.length < 2) {
+
+        showError(
+            "nameError",
+            "Name must contain at least 2 characters."
+        );
+
+        return false;
+
+    }
+
+
+    if (name.length > 50) {
+
+        showError(
+            "nameError",
+            "Name cannot exceed 50 characters."
+        );
+
+        return false;
+
+    }
+
+
+    if (!nameRegex.test(name)) {
+
+        showError(
+            "nameError",
+            "Name can contain only alphabets and spaces."
+        );
+
+        return false;
+
+    }
+
+
+    showSuccess(
+        "nameError",
+        "Valid name."
+    );
+
+    return true;
+
+}
+
+
+
+/* =====================================
+   EMAIL VALIDATION
+   ===================================== */
+
+function validateEmail() {
+
+    const email =
+        emailInput.value.trim();
+
+
+    if (email === "") {
+
+        showError(
+            "emailError",
+            "Email address is required."
+        );
+
+        return false;
+
+    }
+
+
+    if (!email.includes("@")) {
+
+        showError(
+            "emailError",
+            "Email must contain @ symbol."
+        );
+
+        return false;
+
+    }
+
+
+    if (!email.includes(".")) {
+
+        showError(
+            "emailError",
+            "Email must contain a domain such as .com."
+        );
+
+        return false;
+
+    }
+
+
+    if (!emailRegex.test(email)) {
+
+        showError(
+            "emailError",
+            "Enter a valid email such as example@gmail.com."
+        );
+
+        return false;
+
+    }
+
+
+    showSuccess(
+        "emailError",
+        "Valid email address."
+    );
+
+    return true;
+
+}
+
+
+
+/* =====================================
+   MOBILE VALIDATION
+   ===================================== */
+
+function validatePhone() {
+
+    const phone =
+        phoneInput.value.trim();
+
+
+    if (phone === "") {
+
+        showError(
+            "phoneError",
+            "Mobile number is required."
+        );
+
+        return false;
+
+    }
+
+
+    if (!/^[0-9]+$/.test(phone)) {
+
+        showError(
+            "phoneError",
+            "Mobile number can contain only digits."
+        );
+
+        return false;
+
+    }
+
+
+    if (phone.length !== 10) {
+
+        showError(
+            "phoneError",
+            "Mobile number must contain exactly 10 digits."
+        );
+
+        return false;
+
+    }
+
+
+    if (!phoneRegex.test(phone)) {
+
+        showError(
+            "phoneError",
+            "Mobile number must start with 6, 7, 8 or 9."
+        );
+
+        return false;
+
+    }
+
+
+    showSuccess(
+        "phoneError",
+        "Valid mobile number."
+    );
+
+    return true;
+
+}
+
+
+
+/* =====================================
+   PASSWORD VALIDATION
+   ===================================== */
+
+function validatePassword() {
+
+    const password =
+        passwordInput.value;
+
+
+    if (password === "") {
+
+        showError(
+            "passwordError",
+            "Password is required."
+        );
+
+        return false;
+
+    }
+
+
+    if (password.length < 8) {
+
+        showError(
+            "passwordError",
+            "Password must contain at least 8 characters."
+        );
+
+        return false;
+
+    }
+
+
+    if (password.length > 20) {
+
+        showError(
+            "passwordError",
+            "Password cannot exceed 20 characters."
+        );
+
+        return false;
+
+    }
+
+
+    if (!uppercaseRegex.test(password)) {
+
+        showError(
+            "passwordError",
+            "Password must contain at least one uppercase letter."
+        );
+
+        return false;
+
+    }
+
+
+    if (!lowercaseRegex.test(password)) {
+
+        showError(
+            "passwordError",
+            "Password must contain at least one lowercase letter."
+        );
+
+        return false;
+
+    }
+
+
+    if (!digitRegex.test(password)) {
+
+        showError(
+            "passwordError",
+            "Password must contain at least one digit."
+        );
+
+        return false;
+
+    }
+
+
+    if (!specialRegex.test(password)) {
+
+        showError(
+            "passwordError",
+            "Password must contain at least one special character (@, $, !, %, *, ?, &)."
+        );
+
+        return false;
+
+    }
+
+
+    showSuccess(
+        "passwordError",
+        "Password meets all requirements."
+    );
+
+    return true;
+
+}
+
+
+
+/* =====================================
+   PASSWORD STRENGTH METER
+   ===================================== */
+
+function checkPasswordStrength() {
+
+    const password =
+        passwordInput.value;
+
+    const strength =
+        document.getElementById(
+            "passwordStrength"
+        );
+
+
+    if (password.length === 0) {
+
+        strength.textContent = "";
+
+        return;
+
+    }
+
+
+    let score = 0;
+
+
+    if (password.length >= 8) {
+        score++;
+    }
+
+    if (password.length >= 12) {
+        score++;
+    }
+
+    if (uppercaseRegex.test(password)) {
+        score++;
+    }
+
+    if (lowercaseRegex.test(password)) {
+        score++;
+    }
+
+    if (digitRegex.test(password)) {
+        score++;
+    }
+
+    if (specialRegex.test(password)) {
+        score++;
+    }
+
+
+    if (score <= 2) {
+
+        strength.textContent =
+            "Password Strength: Weak";
+
+    }
+
+    else if (score <= 4) {
+
+        strength.textContent =
+            "Password Strength: Medium";
+
+    }
+
+    else {
+
+        strength.textContent =
+            "Password Strength: Strong";
+
+    }
+
+}
+
+
+
+/* =====================================
+   CONFIRM PASSWORD
+   ===================================== */
+
+function validateConfirmPassword() {
+
+    const password =
+        passwordInput.value;
+
+    const confirmPassword =
+        confirmPasswordInput.value;
+
+
+    if (confirmPassword === "") {
+
+        showError(
+            "confirmPasswordError",
+            "Please confirm your password."
+        );
+
+        return false;
+
+    }
+
+
+    if (confirmPassword !== password) {
+
+        showError(
+            "confirmPasswordError",
+            "Passwords do not match."
+        );
+
+        return false;
+
+    }
+
+
+    showSuccess(
+        "confirmPasswordError",
+        "Passwords match."
+    );
+
+    return true;
+
+}
+
+
+
+/* =====================================
+   COURSE
+   ===================================== */
+
+function validateCourse() {
+
+    if (courseInput.value === "") {
+
+        showError(
+            "courseError",
+            "Please select your course."
+        );
+
+        return false;
+
+    }
+
+
+    showSuccess(
+        "courseError",
+        "Course selected."
+    );
+
+    return true;
+
+}
+
+
+
+/* =====================================
+   YEAR
+   ===================================== */
+
+function validateYear() {
+
+    if (yearInput.value === "") {
+
+        showError(
+            "yearError",
+            "Please select your year."
+        );
+
+        return false;
+
+    }
+
+
+    showSuccess(
+        "yearError",
+        "Year selected."
+    );
+
+    return true;
+
+}
+
+
+
+/* =====================================
+   GENDER
+   ===================================== */
+
+function validateGender() {
+
+    const gender =
+        document.querySelector(
+            'input[name="gender"]:checked'
+        );
+
+
+    if (!gender) {
+
+        showError(
+            "genderError",
+            "Please select your gender."
+        );
+
+        return false;
+
+    }
+
+
+    showSuccess(
+        "genderError",
+        "Gender selected."
+    );
+
+    return true;
+
+}
+
+
+
+/* =====================================
+   TERMS
+   ===================================== */
+
+function validateTerms() {
+
+    if (!termsInput.checked) {
+
+        showError(
+            "termsError",
+            "You must accept the Terms and Conditions."
+        );
+
+        return false;
+
+    }
+
+
+    showSuccess(
+        "termsError",
+        "Terms accepted."
+    );
+
+    return true;
+
+}
+
+
+
+/* =====================================
+   LIVE VALIDATION
+   ===================================== */
+
+nameInput.addEventListener(
+    "input",
+    validateName
+);
+
+
+emailInput.addEventListener(
+    "input",
+    validateEmail
+);
+
+
+phoneInput.addEventListener(
+    "input",
+    validatePhone
+);
+
+
+passwordInput.addEventListener(
+    "input",
+    function() {
+
+        validatePassword();
+
+        checkPasswordStrength();
+
+
+        if (confirmPasswordInput.value !== "") {
+
+            validateConfirmPassword();
+
+        }
+
+    }
+);
+
+
+confirmPasswordInput.addEventListener(
+    "input",
+    validateConfirmPassword
+);
+
+
+courseInput.addEventListener(
+    "change",
+    validateCourse
+);
+
+
+yearInput.addEventListener(
+    "change",
+    validateYear
+);
+
+
+document
+    .querySelectorAll(
+        'input[name="gender"]'
+    )
+    .forEach(function(radio) {
+
+        radio.addEventListener(
+            "change",
+            validateGender
+        );
+
+    });
+
+
+termsInput.addEventListener(
+    "change",
+    validateTerms
+);
+
+
+
+/* =====================================
+   FORM SUBMISSION
+   ===================================== */
+
+form.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const validName =
+            validateName();
+
+        const validEmail =
+            validateEmail();
+
+        const validPhone =
+            validatePhone();
+
+        const validPassword =
+            validatePassword();
+
+        const validConfirmPassword =
+            validateConfirmPassword();
+
+        const validCourse =
+            validateCourse();
+
+        const validYear =
+            validateYear();
+
+        const validGender =
+            validateGender();
+
+        const validTerms =
+            validateTerms();
+
+
+        if (
+            validName &&
+            validEmail &&
+            validPhone &&
+            validPassword &&
+            validConfirmPassword &&
+            validCourse &&
+            validYear &&
+            validGender &&
+            validTerms
+        ) {
+
+            document.getElementById(
+                "successMessage"
+            ).textContent =
+                "Registration successful!";
+
+        }
+
+        else {
+
+            document.getElementById(
+                "successMessage"
+            ).textContent = "";
+
+        }
+
+    }
+);
+
+
+</script>
 
 
 </body>

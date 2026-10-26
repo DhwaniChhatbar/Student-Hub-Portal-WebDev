@@ -1,41 +1,76 @@
+/* ==========================
+   RESET
+========================== */
+
 *{
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
+/* ==========================
+   MOBILE FIRST
+========================== */
 
 body{
 
-    font-family: Arial, sans-serif;
-
-    background-color: #9d6a6a;
-
-    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fa;
+    color:#222;
+    line-height:1.6;
+    font-size:16px;
 
 }
 
+/* Images */
 
+img{
 
-/* Header */
+    max-width:100%;
+    height:auto;
+    display:block;
+
+}
+
+/* Skip Link */
+
+.skip-link{
+
+    position:absolute;
+    left:-9999px;
+    top:10px;
+    background:#000;
+    color:#fff;
+    padding:10px;
+    text-decoration:none;
+    z-index:999;
+
+}
+
+.skip-link:focus{
+
+    left:10px;
+
+}
+
+/* ==========================
+   HEADER
+========================== */
 
 header{
 
-    background-color: rgb(74, 74, 137);
-
+    background:rgb(74,74,137);
     color:white;
-
     text-align:center;
-
     padding:20px;
 
 }
 
-
 header h1{
 
-    margin:5px;
+    margin-bottom:5px;
 
 }
-
 
 header p{
 
@@ -43,21 +78,34 @@ header p{
 
 }
 
+/* ==========================
+   NAVIGATION
+========================== */
 
+nav a.active{
 
+    background:white;
+    color:black;
 
-/* Navigation */
+}
 
 nav{
 
-    background-color: rgb(97, 159, 180);
+    background:rgb(97,159,180);
 
-    text-align:center;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
 
     padding:15px;
 
 }
-
 
 nav a{
 
@@ -65,47 +113,81 @@ nav a{
 
     color:black;
 
-    margin:12px;
-
     font-weight:bold;
 
-}
+    padding:8px 12px;
 
+    border-radius:5px;
+
+    transition:.3s;
+
+}
 
 nav a:hover{
 
-    color:white;
+    background:white;
+
+    color:black;
 
 }
 
+/* Breadcrumb */
 
+nav[aria-label="Breadcrumb"]{
 
+    background:none;
 
+    justify-content:flex-start;
 
-/* Main Sections */
+    padding:10px 0;
+
+    gap:5px;
+
+    font-size:14px;
+
+}
+
+nav[aria-label="Breadcrumb"] a{
+
+    padding:0;
+
+}
+
+/* ==========================
+   MAIN
+========================== */
 
 main{
 
     min-height:80vh;
 
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:20px;
+
 }
 
-
+/* ==========================
+   SECTION
+========================== */
 
 section{
 
-    background-color:rgb(236, 210, 210);
+    background:rgb(236,210,210);
 
-    margin:20px;
+    margin:20px auto;
 
     padding:20px;
 
     border-radius:10px;
 
+    max-width:1200px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+
 }
-
-
-
 
 .hero{
 
@@ -113,62 +195,92 @@ section{
 
 }
 
+/* ==========================
+   ARTICLE
+========================== */
 
+article{
 
+    margin-bottom:20px;
 
+}
 
-/* Headings */
+/* ==========================
+   ASIDE
+========================== */
+
+aside{
+
+    background:white;
+
+    max-width:1200px;
+
+    margin:20px auto;
+
+    padding:20px;
+
+    border-left:5px solid rgb(74,74,137);
+
+    border-radius:10px;
+
+}
+
+aside h3{
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================
+   HEADINGS
+========================== */
 
 h2{
 
     text-align:center;
 
-    color:rgb(0, 0, 0);
+    margin-bottom:15px;
 
 }
-
 
 h3{
 
-    color:rgb(8, 8, 8);
+    margin-bottom:10px;
 
 }
 
-
-
-
-
-/* Tables */
+/* ==========================
+   TABLE
+========================== */
 
 table{
 
-    width:80%;
-
-    margin:20px auto;
+    width:100%;
 
     border-collapse:collapse;
 
-}
-
-
-
-table, th, td{
-
-    border:1px solid rgb(89, 38, 38);
+    margin-top:15px;
 
 }
 
+table,
+th,
+td{
 
+    border:1px solid rgb(89,38,38);
+
+}
 
 th{
 
-    background-color:rgb(88, 115, 126);
+    background:rgb(88,115,126);
+
+    color:white;
 
 }
 
-
-
-th, td{
+th,
+td{
 
     padding:12px;
 
@@ -176,33 +288,31 @@ th, td{
 
 }
 
-
-
-
-
-/* Lists */
+/* ==========================
+   LIST
+========================== */
 
 ul{
 
-    line-height:30px;
+    padding-left:20px;
 
 }
 
+ul li{
 
+    margin:10px 0;
 
+}
 
-
-/* Forms */
+/* ==========================
+   FORM
+========================== */
 
 .form-group{
 
-    margin:15px auto;
-
-    width:60%;
+    margin-bottom:15px;
 
 }
-
-
 
 label{
 
@@ -214,8 +324,6 @@ label{
 
 }
 
-
-
 input,
 textarea,
 select{
@@ -224,27 +332,38 @@ select{
 
     padding:10px;
 
-    border:1px solid rgb(74, 36, 36);
+    border:1px solid rgb(74,36,36);
 
     border-radius:5px;
 
 }
 
-
-
 textarea{
 
-    resize:none;
+    resize:vertical;
 
 }
 
+/* Registration Grid */
 
+.form-grid{
 
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
 
 button,
 .btn{
 
-    background-color:rgb(96, 96, 145);
+    background:rgb(96,96,145);
 
     color:white;
 
@@ -260,29 +379,29 @@ button,
 
     display:inline-block;
 
+    transition:0.3s;
+
 }
-
-
 
 button:hover,
 .btn:hover{
 
-    background-color:rgb(163, 176, 181);
+    background:rgb(163,176,181);
 
     color:black;
 
 }
 
-
-
-
-
-/* Login/Register */
+/* ==========================
+   LOGIN & REGISTER
+========================== */
 
 .login-box,
 .register-box{
 
-    width:50%;
+    width:100%;
+
+    max-width:700px;
 
     margin:30px auto;
 
@@ -290,41 +409,53 @@ button:hover,
 
 }
 
+/* ==========================
+   CSS GRID
+========================== */
 
+/* Home Page Cards */
 
+.grid-3{
 
+    display:grid;
 
-/* Dashboard Cards */
-
-.card-container{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
+    grid-template-columns:1fr;
 
     gap:20px;
 
 }
 
+/* Dashboard Cards */
 
+.card-container{
 
-.card{
+    display:grid;
 
-    width:250px;
+    grid-template-columns:1fr;
 
-    background-color:#eeeeee;
-
-    padding:20px;
-
-    text-align:center;
-
-    border-radius:10px;
+    gap:20px;
 
 }
 
+.card{
 
+    background:#eeeeee;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
 
 .card a{
 
@@ -336,43 +467,51 @@ button:hover,
 
 }
 
+/* About Page */
 
+.about-grid{
 
+    display:grid;
 
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
 
 /* Gallery */
 
 .gallery{
 
-    text-align:center;
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+    justify-items:center;
 
 }
-
-
 
 .gallery img{
 
-    width:250px;
+    width:100%;
 
-    height:170px;
-
-    margin:10px;
+    max-width:300px;
 
     border:2px solid black;
 
-    border-radius:5px;
+    border-radius:8px;
 
 }
 
-
-
-
-
-/* Footer */
+/* ==========================
+   FOOTER
+========================== */
 
 footer{
 
-    background-color:rgb(74, 74, 137);
+    background:rgb(74,74,137);
 
     color:white;
 
@@ -382,53 +521,284 @@ footer{
 
 }
 
+/* ==========================
+   PRACTICAL 6 - JSON DATA
+========================== */
+
+/* Search, Filter and Sort */
+
+.controls{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+}
+
+.controls input,
+.controls select{
+
+    flex:1;
+
+    min-width:180px;
+
+}
 
 
+/* JSON Cards */
+
+#eventContainer .card,
+#studentContainer .card{
+
+    background:#eeeeee;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
+
+}
+
+#eventContainer .card h3,
+#studentContainer .card h3{
+
+    color:rgb(74,74,137);
+
+}
 
 
-/* Mobile Responsive */
+/* FAQ */
 
-@media(max-width:700px){
+#faqContainer .card{
 
+    background:#eeeeee;
 
-    nav a{
+    padding:20px;
 
-        display:block;
+    margin-bottom:15px;
 
-        margin:10px;
+    border-radius:10px;
 
-    }
+}
 
+#faqContainer .card h3{
 
-    table{
+    color:rgb(74,74,137);
 
-        width:100%;
-
-        font-size:14px;
-
-    }
+}
 
 
-    .login-box,
-    .register-box{
+/* Loading Message */
 
-        width:90%;
+#eventLoading,
+#studentLoading,
+#faqLoading{
 
-    }
+    text-align:center;
+
+    font-weight:bold;
+
+    margin:15px;
+
+}
 
 
-    .form-group{
+/* Error Message */
 
-        width:90%;
+#eventError,
+#studentError,
+#faqError{
 
-    }
+    text-align:center;
+
+    color:red;
+
+    font-weight:bold;
+
+    margin:15px;
+
+}
 
 
-    .card{
+/* Pagination */
 
-        width:90%;
+.pagination{
 
-    }
+    display:flex;
 
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.pagination button{
+
+    padding:8px 14px;
+
+}
+
+.pagination button.active{
+
+    background:rgb(74,74,137);
+
+    color:white;
+
+}
+
+.pagination button:disabled{
+
+    background:#cccccc;
+
+    color:#666;
+
+    cursor:not-allowed;
+
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media(min-width:768px){
+
+body{
+
+    font-size:17px;
+
+}
+
+.grid-3{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.card-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.about-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.gallery{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.form-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.login-box,
+.register-box{
+
+    width:80%;
+
+}
+
+}
+
+
+/* ==========================
+   DESKTOP
+========================== */
+
+@media(min-width:1024px){
+
+body{
+
+    font-size:18px;
+
+}
+
+.grid-3{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.card-container{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+.about-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.gallery{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.login-box,
+.register-box{
+
+    width:60%;
+
+}
+
+}
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media(max-width:600px){
+
+nav{
+
+    flex-direction:column;
+
+}
+
+table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+.controls{
+
+    flex-direction:column;
+
+}
+
+.controls input,
+.controls select{
+
+    width:100%;
+
+}
 
 }

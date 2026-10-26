@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Tech Fest 2026",
+    "category": "Technical",
+    "date": "2026-10-05",
+    "venue": "Main Auditorium",
+    "organizer": "CSE Department"
+  },
+  {
+    "id": 2,
+    "name": "Web Development Workshop",
+    "category": "Workshop",
+    "date": "2026-10-08",
+    "venue": "Computer Lab 1",
+    "organizer": "Web Club"
+  },
+  {
+    "id": 3,
+    "name": "Coding Competition",
+    "category": "Competition",
+    "date": "2026-10-12",
+    "venue": "Computer Lab 2",
+    "organizer": "Coding Club"
+  },
+  {
+    "id": 4,
+    "name": "Cybersecurity Awareness",
+    "category": "Seminar",
+    "date": "2026-10-15",
+    "venue": "Seminar Hall",
+    "organizer": "Cybersecurity Club"
+  },
+  {
+    "id": 5,
+    "name": "AI and Machine Learning Workshop",
+    "category": "Workshop",
+    "date": "2026-10-18",
+    "venue": "Room 204",
+    "organizer": "AI Club"
+  },
+  {
+    "id": 6,
+    "name": "Hackathon 2026",
+    "category": "Competition",
+    "date": "2026-10-20",
+    "venue": "Innovation Lab",
+    "organizer": "Tech Club"
+  },
+  {
+    "id": 7,
+    "name": "Cloud Computing Seminar",
+    "category": "Seminar",
+    "date": "2026-10-22",
+    "venue": "Seminar Hall",
+    "organizer": "Cloud Club"
+  },
+  {
+    "id": 8,
+    "name": "Java Programming Workshop",
+    "category": "Workshop",
+    "date": "2026-10-25",
+    "venue": "Computer Lab 3",
+    "organizer": "Programming Club"
+  },
+  {
+    "id": 9,
+    "name": "Sports Day",
+    "category": "Sports",
+    "date": "2026-10-28",
+    "venue": "University Ground",
+    "organizer": "Sports Committee"
+  },
+  {
+    "id": 10,
+    "name": "Entrepreneurship Talk",
+    "category": "Seminar",
+    "date": "2026-11-02",
+    "venue": "Main Auditorium",
+    "organizer": "E-Cell"
+  },
+  {
+    "id": 11,
+    "name": "Database Management Workshop",
+    "category": "Workshop",
+    "date": "2026-11-05",
+    "venue": "Computer Lab 1",
+    "organizer": "CSE Department"
+  },
+  {
+    "id": 12,
+    "name": "Project Exhibition",
+    "category": "Exhibition",
+    "date": "2026-11-08",
+    "venue": "Exhibition Hall",
+    "organizer": "Innovation Cell"
+  },
+  {
+    "id": 13,
+    "name": "Photography Contest",
+    "category": "Competition",
+    "date": "2026-11-10",
+    "venue": "Open Ground",
+    "organizer": "Cultural Club"
+  },
+  {
+    "id": 14,
+    "name": "Career Guidance Seminar",
+    "category": "Seminar",
+    "date": "2026-11-15",
+    "venue": "Main Auditorium",
+    "organizer": "Training and Placement Cell"
+  },
+  {
+    "id": 15,
+    "name": "Robotics Workshop",
+    "category": "Workshop",
+    "date": "2026-11-18",
+    "venue": "Robotics Lab",
+    "organizer": "Robotics Club"
+  }
+]

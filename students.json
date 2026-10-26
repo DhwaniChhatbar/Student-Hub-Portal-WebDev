@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Patel",
+    "course": "B.Tech CSE",
+    "semester": 3,
+    "email": "aarav@example.com",
+    "city": "Ahmedabad"
+  },
+  {
+    "id": 2,
+    "name": "Diya Shah",
+    "course": "B.Tech IT",
+    "semester": 3,
+    "email": "diya@example.com",
+    "city": "Vadodara"
+  },
+  {
+    "id": 3,
+    "name": "Rohan Mehta",
+    "course": "B.Tech CSE",
+    "semester": 5,
+    "email": "rohan@example.com",
+    "city": "Surat"
+  },
+  {
+    "id": 4,
+    "name": "Ananya Patel",
+    "course": "B.Tech AI",
+    "semester": 3,
+    "email": "ananya@example.com",
+    "city": "Rajkot"
+  },
+  {
+    "id": 5,
+    "name": "Vivaan Desai",
+    "course": "B.Tech CSE",
+    "semester": 7,
+    "email": "vivaan@example.com",
+    "city": "Anand"
+  },
+  {
+    "id": 6,
+    "name": "Ishita Shah",
+    "course": "B.Tech IT",
+    "semester": 5,
+    "email": "ishita@example.com",
+    "city": "Nadiad"
+  },
+  {
+    "id": 7,
+    "name": "Krish Patel",
+    "course": "B.Tech CSE",
+    "semester": 3,
+    "email": "krish@example.com",
+    "city": "Ahmedabad"
+  },
+  {
+    "id": 8,
+    "name": "Meera Joshi",
+    "course": "B.Tech AI",
+    "semester": 5,
+    "email": "meera@example.com",
+    "city": "Vadodara"
+  },
+  {
+    "id": 9,
+    "name": "Aditya Shah",
+    "course": "B.Tech CSE",
+    "semester": 7,
+    "email": "aditya@example.com",
+    "city": "Surat"
+  },
+  {
+    "id": 10,
+    "name": "Kavya Patel",
+    "course": "B.Tech IT",
+    "semester": 3,
+    "email": "kavya@example.com",
+    "city": "Anand"
+  },
+  {
+    "id": 11,
+    "name": "Dhruv Mehta",
+    "course": "B.Tech CSE",
+    "semester": 5,
+    "email": "dhruv@example.com",
+    "city": "Rajkot"
+  },
+  {
+    "id": 12,
+    "name": "Siya Desai",
+    "course": "B.Tech AI",
+    "semester": 7,
+    "email": "siya@example.com",
+    "city": "Ahmedabad"
+  },
+  {
+    "id": 13,
+    "name": "Arjun Shah",
+    "course": "B.Tech CSE",
+    "semester": 3,
+    "email": "arjun@example.com",
+    "city": "Vadodara"
+  },
+  {
+    "id": 14,
+    "name": "Myra Patel",
+    "course": "B.Tech IT",
+    "semester": 5,
+    "email": "myra@example.com",
+    "city": "Nadiad"
+  },
+  {
+    "id": 15,
+    "name": "Reyansh Joshi",
+    "course": "B.Tech CSE",
+    "semester": 7,
+    "email": "reyansh@example.com",
+    "city": "Surat"
+  }
+]

@@ -1,89 +1,163 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-    <title>Student Hub Portal</title>
-
-    <link rel="stylesheet" href="style.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Student Hub Portal</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style4.css">
+<link rel="stylesheet" href="practical6.css">
 </head>
-
 <body>
 
+<div class="notification" id="notification">
+<p>📢 New Event Registration is Open!</p>
+<button onclick="closeNotification()">×</button>
+</div>
+
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
+
 <header>
-
-    <h1>Student Hub Portal</h1>
-
+<h1>Student Hub Portal</h1>
+<p>Your Gateway to Student Life</p>
 </header>
 
-<nav>
-
-    <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="events.html">Events</a>
-    <a href="helpdesk.html">Helpdesk</a>
-    <a href="login.html">Login</a>
-    <a href="register.html">Register</a>
-
+<nav aria-label="Main Navigation">
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div id="nav-links">
+<a href="index.html">Home</a>
+<a href="aboutus.html">About Us</a>
+<a href="events.html">Events</a>
+<a href="helpdesk.html">Helpdesk</a>
+<a href="login.html">Login</a>
+<a href="register.html">Register</a>
+<a href="faq.html">FAQ</a>
+</div>
 </nav>
 
+<main id="main-content">
+
+<section class="hero">
+<h2>Welcome to Student Hub Portal</h2>
+<p>A centralized platform for students to access academic information, events, announcements and campus services.</p>
+<br>
+<button id="themeBtn">🌙 Dark Theme</button>
+</section>
+
+<!-- PRACTICAL 6 : EVENTS -->
 <section>
-
-    <h2>Welcome to Student Hub Portal</h2>
-
+<h2>Events</h2>
+<div class="controls">
+<input type="text" id="eventSearch" placeholder="Search events...">
+<select id="eventFilter">
+<option value="all">All Categories</option>
+<option value="Technical">Technical</option>
+<option value="Workshop">Workshop</option>
+<option value="Competition">Competition</option>
+<option value="Seminar">Seminar</option>
+<option value="Sports">Sports</option>
+<option value="Exhibition">Exhibition</option>
+</select>
+<select id="eventSort">
+<option value="default">Sort By</option>
+<option value="az">Name A-Z</option>
+<option value="za">Name Z-A</option>
+<option value="dateAsc">Date: Oldest First</option>
+<option value="dateDesc">Date: Newest First</option>
+</select>
+</div>
+<p id="eventLoading">Loading events...</p>
+<p id="eventError"></p>
+<div id="eventContainer" class="grid-3"></div>
+<div id="eventPagination" class="pagination"></div>
 </section>
 
+<!-- PRACTICAL 6 : STUDENTS -->
 <section>
-
-    <h2>Latest Events</h2>
-
-    <ul>
-
-        <li>Hackathon 2026</li>
-
-        <li>Web Development Workshop</li>
-
-        <li>Cultural Fest</li>
-
-    </ul>
-
+<h2>Student Profiles</h2>
+<div class="controls">
+<input type="text" id="studentSearch" placeholder="Search students...">
+<select id="studentFilter">
+<option value="all">All Courses</option>
+<option value="B.Tech CSE">B.Tech CSE</option>
+<option value="B.Tech IT">B.Tech IT</option>
+<option value="B.Tech AI">B.Tech AI</option>
+</select>
+<select id="studentSort">
+<option value="default">Sort By</option>
+<option value="az">Name A-Z</option>
+<option value="za">Name Z-A</option>
+</select>
+</div>
+<p id="studentLoading">Loading students...</p>
+<p id="studentError"></p>
+<div id="studentContainer" class="grid-3"></div>
+<div id="studentPagination" class="pagination"></div>
 </section>
 
+<!-- PRACTICAL 6 : FAQS -->
 <section>
-
-    <h2>Announcements</h2>
-
-    <ul>
-
-        <li>Semester examinations begin from 10 August.</li>
-
-        <li>Library timings extended till 8 PM.</li>
-
-        <li>Project submission deadline is 25 July.</li>
-
-    </ul>
-
+<h2>Frequently Asked Questions</h2>
+<div class="controls">
+<input type="text" id="faqSearch" placeholder="Search FAQs...">
+<select id="faqSort">
+<option value="default">Sort By</option>
+<option value="az">Question A-Z</option>
+<option value="za">Question Z-A</option>
+</select>
+</div>
+<p id="faqLoading">Loading FAQs...</p>
+<p id="faqError"></p>
+<div id="faqContainer"></div>
+<div id="faqPagination" class="pagination"></div>
 </section>
 
-<section align="center">
-
-    <h2>Event Gallery</h2>
-
-    <img src="images/img1.jpeg" alt="Event 1"><br>
-
-    <img src="images/img2.jpeg" alt="Event 2"><br>
-
-    <img src="images/img3.jpeg" alt="Event 3">
-
+<!-- ANNOUNCEMENTS -->
+<section>
+<h2>Announcements</h2>
+<div class="grid-3">
+<div class="card">
+<h3>Semester Exams</h3>
+<p>Semester examinations begin from 10 August.</p>
+</div>
+<div class="card">
+<h3>Library</h3>
+<p>Library timings extended until 8 PM.</p>
+</div>
+<div class="card">
+<h3>Project Submission</h3>
+<p>Project submission deadline is 25 July.</p>
+</div>
+</div>
 </section>
+
+<!-- EVENT GALLERY -->
+<section>
+<h2>Event Gallery</h2>
+<div class="gallery">
+<img src="images/img1.jpeg" alt="Students participating in Hackathon">
+<img src="images/img2.jpeg" alt="Web Development Workshop">
+<img src="images/img3.jpeg" alt="College Cultural Festival">
+</div>
+</section>
+
+</main>
 
 <footer>
-
-    <p>© 2026 Student Hub Portal | All Rights Reserved</p>
-
+<p>© 2026 Student Hub Portal | All Rights Reserved</p>
 </footer>
 
-</body>
+<script>
+function closeNotification(){
+    document.getElementById("notification").style.display = "none";
+}
+function toggleMenu(){
+    document.getElementById("nav-links").classList.toggle("show");
+}
+</script>
 
+<script src="practical6.js"></script>
+<script src="dark.js"></script>
+
+</body>
 </html>

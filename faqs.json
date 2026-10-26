@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "question": "How do I register for an event?",
+    "answer": "Open the event page and click the Register button."
+  },
+  {
+    "id": 2,
+    "question": "Where can I find my timetable?",
+    "answer": "The timetable is available in the student portal."
+  },
+  {
+    "id": 3,
+    "question": "How can I reset my password?",
+    "answer": "Use the Forgot Password option on the login page."
+  },
+  {
+    "id": 4,
+    "question": "How do I check my attendance?",
+    "answer": "You can check your attendance from the student dashboard."
+  },
+  {
+    "id": 5,
+    "question": "Where can I see upcoming events?",
+    "answer": "Upcoming events are displayed on the Events page."
+  },
+  {
+    "id": 6,
+    "question": "How can I contact the administration?",
+    "answer": "Use the contact details provided on the Helpdesk page."
+  },
+  {
+    "id": 7,
+    "question": "Can I update my profile?",
+    "answer": "Yes, you can update your profile from the Profile section."
+  },
+  {
+    "id": 8,
+    "question": "Where can I download certificates?",
+    "answer": "Certificates can be downloaded from the Certificates section."
+  },
+  {
+    "id": 9,
+    "question": "How do I register for a course?",
+    "answer": "Select the required course and click the Enroll button."
+  },
+  {
+    "id": 10,
+    "question": "Where can I see announcements?",
+    "answer": "All important announcements are available on the Announcements page."
+  },
+  {
+    "id": 11,
+    "question": "How can I submit an assignment?",
+    "answer": "Assignments can be submitted through the course portal."
+  },
+  {
+    "id": 12,
+    "question": "What should I do if I forget my student ID?",
+    "answer": "Contact the administration or check your student profile."
+  },
+  {
+    "id": 13,
+    "question": "How can I join a college club?",
+    "answer": "Visit the club registration section and submit the membership form."
+  },
+  {
+    "id": 14,
+    "question": "Where can I find exam information?",
+    "answer": "Exam schedules and notices are available in the student portal."
+  },
+  {
+    "id": 15,
+    "question": "How can I contact the helpdesk?",
+    "answer": "You can contact the helpdesk through the Helpdesk page."
+  }
+]
