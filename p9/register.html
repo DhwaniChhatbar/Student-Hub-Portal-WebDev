@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+</head>
+<body>
+    <h2>Register Account</h2>
+
+    <form action="register.php" method="POST">
+        <label>Username:</label><br>
+        <input type="text" name="username" required minlength="3" maxlength="50" pattern="[a-zA-Z0-9_]+"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password" required minlength="6"><br><br>
+
+        <label>Confirm Password:</label><br>
+        <input type="password" name="confirm_password" required minlength="6"><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
